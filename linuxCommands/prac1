@@ -1,0 +1,22 @@
+// What command stat myfile.txt do?
+-- using man stat,
+   we can discover that it will show file statistics for my file.txt
+
+// df -h/ do?
+-- again using man df
+shows disk utilization of root file system in human readable way
+
+// What command use to search for file directory hierarchy
+-- using apropos command
+
+// which option would use with ls command to o/p a comma separated list of files and directories.
+-- using (man ls) & then (ls -m)
+
+// all command are below mentioned...
+@Subhomoy21 ➜ /workspaces/LearningLinux (main) $ man stat
+@Subhomoy21 ➜ /workspaces/LearningLinux (main) $ man df
+@Subhomoy21 ➜ /workspaces/LearningLinux (main) $ apropos "search for files"
+find (1)             - search for files in a directory hierarchy
+@Subhomoy21 ➜ /workspaces/LearningLinux (main) $ man ls
+@Subhomoy21 ➜ /workspaces/LearningLinux (main) $ ls -m
+README.md, linuxCommands
