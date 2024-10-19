@@ -1,0 +1,24 @@
+// 1. Tab completion
+after writing the commmands if you press tab it completes the full arguments. 
+@Subhomoy21 ➜ /workspaces/LearningLinux (main) $ ls -l linuxCommands/
+total 40
+-rw-rw-rw- 1 codespace codespace 35147 Oct 19 05:19 findingHelpForCommands.txt
+-rw-rw-rw- 1 codespace codespace     0 Oct 19 05:24 keyboardsShortcut.txt
+-rw-rw-rw- 1 codespace codespace   421 Oct 19 04:54 linuxBasicCommands1.txt
+
+2.completing the commands.
+@Subhomoy21 ➜ /workspaces/LearningLinux (main) $ a
+accessdb               addpart                apropos                apt-key                arptables-nft          autoheader
+aclocal                addr2line              apt                    apt-mark               arptables-nft-restore  autom4te
+aclocal-1.16           adduser                apt-add-repository     apt-sortpkgs           arptables-nft-save     automake
+acountry               adig                   apt-cache              ar                     arptables-restore      automake-1.16
+activate               agetty                 apt-cdrom              arch                   arptables-save         autopep8
+add-apt-repository     ahost                  apt-config             archspec               as                     autoreconf
+add-shell              alert                  apt-extracttemplates   arp                    asan_symbolize         autoscan
+addgnupghome           alias                  apt-ftparchive         arpd                   asan_symbolize-10      autoupdate
+addgroup               applygnupgdefaults     apt-get                arptables              autoconf               awk
+
+after if you press space and again press tab then it acts as arguments
+
+@Subhomoy21 ➜ /workspaces/LearningLinux (main) $ a 
+.git/          README.md      linuxCommands/ 
