@@ -1,0 +1,443 @@
+// FINDING HELP TO USE COMMANDS
+@Subhomoy21 ➜ /workspaces/LearningLinux (main) $ man ls
+^[OB@Subhomoy21 ➜ /workspaces/LearningLinux (main) $ man ls
+@Subhomoy21 ➜ /workspaces/LearningLinux (main) $ ls --author
+README.md  linuxCommands
+@Subhomoy21 ➜ /workspaces/LearningLinux (main) $ ls -c
+linuxCommands  README.md
+@Subhomoy21 ➜ /workspaces/LearningLinux (main) $ ls -p
+README.md  linuxCommands/
+@Subhomoy21 ➜ /workspaces/LearningLinux (main) $ ls --help
+Usage: ls [OPTION]... [FILE]...
+List information about the FILEs (the current directory by default).
+Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --all                  do not ignore entries starting with .
+  -A, --almost-all           do not list implied . and ..
+      --author               with -l, print the author of each file
+  -b, --escape               print C-style escapes for nongraphic characters
+      --block-size=SIZE      with -l, scale sizes by SIZE when printing them;
+                               e.g., '--block-size=M'; see SIZE format below
+  -B, --ignore-backups       do not list implied entries ending with ~
+  -c                         with -lt: sort by, and show, ctime (time of last
+                               modification of file status information);
+                               with -l: show ctime and sort by name;
+                               otherwise: sort by ctime, newest first
+  -C                         list entries by columns
+      --color[=WHEN]         colorize the output; WHEN can be 'always' (default
+                               if omitted), 'auto', or 'never'; more info below
+  -d, --directory            list directories themselves, not their contents
+  -D, --dired                generate output designed for Emacs' dired mode
+  -f                         do not sort, enable -aU, disable -ls --color
+  -F, --classify             append indicator (one of */=>@|) to entries
+      --file-type            likewise, except do not append '*'
+      --format=WORD          across -x, commas -m, horizontal -x, long -l,
+                               single-column -1, verbose -l, vertical -C
+      --full-time            like -l --time-style=full-iso
+  -g                         like -l, but do not list owner
+      --group-directories-first
+                             group directories before files;
+                               can be augmented with a --sort option, but any
+                               use of --sort=none (-U) disables grouping
+  -G, --no-group             in a long listing, don't print group names
+  -h, --human-readable       with -l and -s, print sizes like 1K 234M 2G etc.
+      --si                   likewise, but use powers of 1000 not 1024
+  -H, --dereference-command-line
+                             follow symbolic links listed on the command line
+      --dereference-command-line-symlink-to-dir
+                             follow each command line symbolic link
+                               that points to a directory
+      --hide=PATTERN         do not list implied entries matching shell PATTERN
+                               (overridden by -a or -A)
+      --hyperlink[=WHEN]     hyperlink file names; WHEN can be 'always'
+                               (default if omitted), 'auto', or 'never'
+      --indicator-style=WORD  append indicator with style WORD to entry names:
+                               none (default), slash (-p),
+                               file-type (--file-type), classify (-F)
+  -i, --inode                print the index number of each file
+  -I, --ignore=PATTERN       do not list implied entries matching shell PATTERN
+  -k, --kibibytes            default to 1024-byte blocks for disk usage;
+                               used only with -s and per directory totals
+  -l                         use a long listing format
+  -L, --dereference          when showing file information for a symbolic
+                               link, show information for the file the link
+                               references rather than for the link itself
+  -m                         fill width with a comma separated list of entries
+  -n, --numeric-uid-gid      like -l, but list numeric user and group IDs
+  -N, --literal              print entry names without quoting
+  -o                         like -l, but do not list group information
+  -p, --indicator-style=slash
+                             append / indicator to directories
+  -q, --hide-control-chars   print ? instead of nongraphic characters
+      --show-control-chars   show nongraphic characters as-is (the default,
+                               unless program is 'ls' and output is a terminal)
+  -Q, --quote-name           enclose entry names in double quotes
+      --quoting-style=WORD   use quoting style WORD for entry names:
+                               literal, locale, shell, shell-always,
+                               shell-escape, shell-escape-always, c, escape
+                               (overrides QUOTING_STYLE environment variable)
+  -r, --reverse              reverse order while sorting
+  -R, --recursive            list subdirectories recursively
+  -s, --size                 print the allocated size of each file, in blocks
+  -S                         sort by file size, largest first
+      --sort=WORD            sort by WORD instead of name: none (-U), size (-S),
+                               time (-t), version (-v), extension (-X)
+      --time=WORD            with -l, show time as WORD instead of default
+                               modification time: atime or access or use (-u);
+                               ctime or status (-c); also use specified time
+                               as sort key if --sort=time (newest first)
+      --time-style=TIME_STYLE  time/date format with -l; see TIME_STYLE below
+  -t                         sort by modification time, newest first
+  -T, --tabsize=COLS         assume tab stops at each COLS instead of 8
+  -u                         with -lt: sort by, and show, access time;
+                               with -l: show access time and sort by name;
+                               otherwise: sort by access time, newest first
+  -U                         do not sort; list entries in directory order
+  -v                         natural sort of (version) numbers within text
+  -w, --width=COLS           set output width to COLS.  0 means no limit
+  -x                         list entries by lines instead of by columns
+  -X                         sort alphabetically by entry extension
+  -Z, --context              print any security context of each file
+  -1                         list one file per line.  Avoid '\n' with -q or -b
+      --help     display this help and exit
+      --version  output version information and exit
+
+The SIZE argument is an integer and optional unit (example: 10K is 10*1024).
+Units are K,M,G,T,P,E,Z,Y (powers of 1024) or KB,MB,... (powers of 1000).
+
+The TIME_STYLE argument can be full-iso, long-iso, iso, locale, or +FORMAT.
+FORMAT is interpreted like in date(1).  If FORMAT is FORMAT1<newline>FORMAT2,
+then FORMAT1 applies to non-recent files and FORMAT2 to recent files.
+TIME_STYLE prefixed with 'posix-' takes effect only outside the POSIX locale.
+Also the TIME_STYLE environment variable sets the default style to use.
+
+Using color to distinguish file types is disabled both by default and
+with --color=never.  With --color=auto, ls emits color codes only when
+standard output is connected to a terminal.  The LS_COLORS environment
+variable can change the settings.  Use the dircolors command to set it.
+
+Exit status:
+ 0  if OK,
+ 1  if minor problems (e.g., cannot access subdirectory),
+ 2  if serious trouble (e.g., cannot access command-line argument).
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Report ls translation bugs to <https://translationproject.org/team/>
+Full documentation at: <https://www.gnu.org/software/coreutils/ls>
+or available locally via: info '(coreutils) ls invocation'
+Subhomoy21 ➜ /workspaces/LearningLinux (main) $ apropos list
+LIST_EMPTY (3)       - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_EMPTY (3bsd)    - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_ENTRY (3)       - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_ENTRY (3bsd)    - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_FIRST (3)       - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_FIRST (3bsd)    - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_FOREACH (3)     - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_FOREACH (3bsd)  - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_HEAD (3)        - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_HEAD (3bsd)     - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_HEAD_INITIALIZER (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_HEAD_INITIALIZER (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_INIT (3)        - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_INIT (3bsd)     - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_INSERT_AFTER (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_INSERT_AFTER (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_INSERT_BEFORE (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_INSERT_BEFORE (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_INSERT_HEAD (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_INSERT_HEAD (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_NEXT (3)        - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_NEXT (3bsd)     - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_REMOVE (3)      - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_REMOVE (3bsd)   - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_EMPTY (3)      - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_EMPTY (3bsd)   - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_ENTRY (3)      - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_ENTRY (3bsd)   - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_FIRST (3)      - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_FIRST (3bsd)   - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_FOREACH (3)    - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_FOREACH (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_HEAD (3)       - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_HEAD (3bsd)    - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_HEAD_INITIALIZER (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_HEAD_INITIALIZER (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_INIT (3)       - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_INIT (3bsd)    - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_INSERT_AFTER (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_INSERT_AFTER (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_INSERT_HEAD (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_INSERT_HEAD (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_NEXT (3)       - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_NEXT (3bsd)    - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_REMOVE (3)     - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_REMOVE (3bsd)  - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_REMOVE_HEAD (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_REMOVE_HEAD (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_CONCAT (3)    - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_CONCAT (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_EMPTY (3)     - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_EMPTY (3bsd)  - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_ENTRY (3)     - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_ENTRY (3bsd)  - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_FIRST (3)     - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_FIRST (3bsd)  - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_FOREACH (3)   - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_FOREACH (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_HEAD (3)      - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_HEAD (3bsd)   - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_HEAD_INITIALIZER (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_HEAD_INITIALIZER (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_INIT (3)      - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_INIT (3bsd)   - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_INSERT_AFTER (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_INSERT_AFTER (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_INSERT_HEAD (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_INSERT_HEAD (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_INSERT_TAIL (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_INSERT_TAIL (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_NEXT (3)      - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_NEXT (3bsd)   - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_REMOVE (3)    - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_REMOVE (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_REMOVE_HEAD (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_REMOVE_HEAD (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_CONCAT (3)     - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_CONCAT (3bsd)  - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_EMPTY (3)      - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_EMPTY (3bsd)   - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_ENTRY (3)      - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_ENTRY (3bsd)   - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_FIRST (3)      - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_FIRST (3bsd)   - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_FOREACH (3)    - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_FOREACH (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_FOREACH_REVERSE (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_FOREACH_REVERSE (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_HEAD (3)       - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_HEAD (3bsd)    - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_HEAD_INITIALIZER (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_HEAD_INITIALIZER (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_INIT (3)       - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_INIT (3bsd)    - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_INSERT_AFTER (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_INSERT_AFTER (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_INSERT_BEFORE (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_INSERT_BEFORE (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_INSERT_HEAD (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_INSERT_HEAD (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_INSERT_TAIL (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_INSERT_TAIL (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_LAST (3)       - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_LAST (3bsd)    - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_NEXT (3)       - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_NEXT (3bsd)    - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_PREV (3)       - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_PREV (3bsd)    - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_REMOVE (3)     - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_REMOVE (3bsd)  - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_SWAP (3)       - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_SWAP (3bsd)    - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+add-apt-repository (1) - Adds a repository into the /etc/apt/sources.list or /etc/apt/sources.list.d or removes an existing one
+add-shell (8)        - add shells to the list of valid login shells
+apt-add-repository (1) - Adds a repository into the /etc/apt/sources.list or /etc/apt/sources.list.d or removes an existing one
+argz (3)             - functions to handle an argz list
+argz_add (3)         - functions to handle an argz list
+argz_add_sep (3)     - functions to handle an argz list
+argz_append (3)      - functions to handle an argz list
+argz_count (3)       - functions to handle an argz list
+argz_create (3)      - functions to handle an argz list
+argz_create_sep (3)  - functions to handle an argz list
+argz_delete (3)      - functions to handle an argz list
+argz_extract (3)     - functions to handle an argz list
+argz_insert (3)      - functions to handle an argz list
+argz_next (3)        - functions to handle an argz list
+argz_replace (3)     - functions to handle an argz list
+argz_stringify (3)   - functions to handle an argz list
+bpf-helpers (7)      - list of eBPF helper functions
+ciphers (1ssl)       - SSL cipher display and cipher list tool
+CIRCLEQ_ENTRY (3)    - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+CIRCLEQ_HEAD (3)     - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+CIRCLEQ_INIT (3)     - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+CIRCLEQ_INSERT_AFTER (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+CIRCLEQ_INSERT_BEFORE (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+CIRCLEQ_INSERT_HEAD (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+CIRCLEQ_INSERT_TAIL (3) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+CIRCLEQ_REMOVE (3)   - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+column (1)           - columnate lists
+corelist (1)         - a commandline frontend to Module::CoreList
+dir (1)              - list directory contents
+dl_iterate_phdr (3)  - walk through list of shared objects
+Dpkg::Control::Fields (3perl) - manage (list of official) control fields
+Dpkg::Control::FieldsCore (3perl) - manage (list of official) control fields
+Dpkg::Deps::AND (3perl) - list of AND dependencies
+Dpkg::Deps::KnownFacts (3perl) - list of installed real and virtual packages
+Dpkg::Deps::OR (3perl) - list of OR dependencies
+Dpkg::Deps::Union (3perl) - list of unrelated dependencies
+fc-conflist (1)      - Show the ruleset files information on the system
+fc-list (1)          - list available fonts
+FcConfigFileInfoIterNext (3) - Set the iterator to point to the next list
+FcConfigGetCacheDirs (3) - return the list of directories searched for cache files
+FcFontList (3)       - List fonts
+FcFontSetList (3)    - List fonts from a set of font sets
+FcFontSort (3)       - Return list of matching fonts
+FcGetDefaultLangs (3) - Get the default languages list
+FcGetLangs (3)       - Get list of languages
+FcLangSetGetLangs (3) - get the list of languages in the langset
+FcStrListCreate (3)  - create a string iterator
+FcStrListDone (3)    - destroy a string iterator
+FcStrListFirst (3)   - get first string in iteration
+FcStrListNext (3)    - get next string in iteration
+flistxattr (2)       - list extended attribute names
+gendict (1)          - Compiles word list into ICU string trie dictionary
+get_ordered_context_list (3) - determine SELinux context(s) for user sessions
+get_ordered_context_list_with_level (3) - determine SELinux context(s) for user sessions
+get_robust_list (2)  - get/set list of robust futexes
+getgrouplist (3)     - get list of groups to which a user belongs
+getgroups (2)        - get/set list of supplementary group IDs
+getgroups32 (2)      - get/set list of supplementary group IDs
+getpcaps (1)         - List Process Capabilities
+gh-alias-list (1)    - List your aliases
+gh-cache-list (1)    - List GitHub Actions caches
+gh-codespace-list (1) - List codespaces
+gh-codespace-ports (1) - List ports in a codespace
+gh-config-list (1)   - Print a list of configuration keys and values
+gh-extension-list (1) - List installed extension commands
+gh-gist-list (1)     - List your gists
+gh-gpg-key-list (1)  - Lists GPG keys in your GitHub account
+gh-issue-list (1)    - List issues in a repository
+gh-label-list (1)    - List labels in a repository
+gh-org-list (1)      - List organizations for the authenticated user.
+gh-pr-list (1)       - List pull requests in a repository
+gh-project-field-list (1) - List the fields in a project
+gh-project-item-list (1) - List the items in a project
+gh-project-list (1)  - List the projects for an owner
+gh-release-list (1)  - List releases in a repository
+gh-repo-deploy-key-list (1) - List deploy keys in a GitHub repository
+gh-repo-list (1)     - List repositories owned by user or organization
+gh-ruleset-list (1)  - List rulesets for a repository or organization
+gh-run-list (1)      - List recent workflow runs
+gh-secret-list (1)   - List secrets
+gh-ssh-key-list (1)  - Lists SSH keys in your GitHub account
+gh-variable-list (1) - List variables
+gh-workflow-list (1) - List workflows
+git-branch (1)       - List, create, or delete branches
+git-lfs-locks (1)    - Lists currently locked files from the Git LFS server.
+git-ls-remote (1)    - List references in a remote repository
+git-ls-tree (1)      - List the contents of a tree object
+git-replace (1)      - Create, list, delete refs to replace objects
+git-rev-list (1)     - Lists commit objects in reverse chronological order
+git-show-ref (1)     - List references in a local repository
+git-sparse-checkout (1) - Initialize and modify the sparse-checkout configuration, which reduces the checkout to a set of paths given by a l...
+git-tag (1)          - Create, list, delete or verify a tag object signed with GPG
+hosts.equiv (5)      - list of hosts and users that are granted "trusted" r command access to your system
+ifcfg (8)            - simplistic script which replaces ifconfig IP management
+initgroups (3)       - initialize the supplementary group access list
+ioctl_list (2)       - list of ioctl calls in Linux/i386 kernel
+iptables-extensions (8) - list of extensions in the standard iptables distribution
+kbxutil (1)          - List, export, import Keybox data
+last (1)             - show a listing of last logged in users
+lastb (1)            - show a listing of last logged in users
+lio_listio (3)       - initiate a list of I/O requests
+list (1ssl)          - list algorithms and features
+LIST_FOREACH_FROM (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_FOREACH_FROM_SAFE (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_FOREACH_SAFE (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_PREV (3bsd)     - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+LIST_SWAP (3bsd)     - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+listen (2)           - listen for connections on a socket
+listxattr (2)        - list extended attribute names
+llistxattr (2)       - list extended attribute names
+lorder (1)           - list dependencies for object files
+ls (1)               - list directory contents
+lsattr (1)           - list file attributes on a Linux second extended file system
+lsblk (8)            - list block devices
+lslocks (8)          - list local system locks
+lsmem (1)            - list the ranges of available memory with their online status
+lsns (8)             - list namespaces
+lsof (8)             - list open files
+lspgpot (1)          - extracts the ownertrust values from PGP keyrings and list them in GnuPG ownertrust format.
+nlist (3bsd)         - retrieve symbol table name list from an executable file
+nm (1)               - list symbols from object files
+openssl-ciphers (1ssl) - SSL cipher display and cipher list tool
+openssl-list (1ssl)  - list algorithms and features
+pam_listfile (8)     - deny or allow services based on an arbitrary file
+pam_localuser (8)    - require users to be listed in /etc/passwd
+pcre16_free_substring_list (3) - Perl-compatible regular expressions
+pcre16_get_substring_list (3) - Perl-compatible regular expressions
+pcre2_substring_list_free (3) - Perl-compatible regular expressions (revised API)
+pcre2_substring_list_get (3) - Perl-compatible regular expressions (revised API)
+pcre32_free_substring_list (3) - Perl-compatible regular expressions
+pcre32_get_substring_list (3) - Perl-compatible regular expressions
+pcre_free_substring_list (3) - Perl-compatible regular expressions
+pcre_get_substring_list (3) - Perl-compatible regular expressions
+queue (3)            - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+queue (3bsd)         - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+remove-shell (8)     - remove shells from the list of valid login shells
+routel (8)           - list routes with pretty output format
+rtmon (8)            - listens to and monitors RTnetlink
+runc-list (8)        - lists containers
+securetty (5)        - file which lists terminals from which root can log in
+selabel_digest (3)   - Return digest of specfiles and list of files used
+selinux_restorecon_set_exclude_list (3) - set list of directories to be excluded from relabeling.
+services (5)         - Internet network services list
+set_robust_list (2)  - get/set list of robust futexes
+setgroups (2)        - get/set list of supplementary group IDs
+setgroups32 (2)      - get/set list of supplementary group IDs
+size (1)             - list section sizes and total size of binary files
+sl_add (3bsd)        - stringlist manipulation functions
+sl_delete (3bsd)     - stringlist manipulation functions
+sl_find (3bsd)       - stringlist manipulation functions
+sl_free (3bsd)       - stringlist manipulation functions
+sl_init (3bsd)       - stringlist manipulation functions
+SLIST_FOREACH_FROM (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_FOREACH_FROM_SAFE (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_FOREACH_SAFE (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_REMOVE_AFTER (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+SLIST_SWAP (3bsd)    - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+sources.list (5)     - List of configured APT data sources
+STAILQ_FOREACH_FROM (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_FOREACH_FROM_SAFE (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_FOREACH_SAFE (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_LAST (3bsd)   - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_REMOVE_AFTER (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+STAILQ_SWAP (3bsd)   - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+stdarg (3)           - variable argument lists
+stringlist (3bsd)    - stringlist manipulation functions
+suffixes (7)         - list of file suffixes
+sys_errlist (3)      - print a system error message
+systemd-path (1)     - List and query system and user paths
+systemd-tty-ask-password-agent (1) - List or process pending systemd password requests
+systemd.index (7)    - List all manpages from the systemd project
+TAILQ_FOREACH_FROM (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_FOREACH_FROM_SAFE (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_FOREACH_REVERSE_FROM (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_FOREACH_REVERSE_FROM_SAFE (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_FOREACH_REVERSE_SAFE (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+TAILQ_FOREACH_SAFE (3bsd) - implementations of singly-linked lists, singly-linked tail queues, lists and tail queues
+tipc-media (8)       - list or modify media properties
+tipc-node (8)        - modify and show local node parameters or list peer nodes
+tree (1)             - list contents of directories in a tree-like format.
+unzip (1)            - list, test and extract compressed files in a ZIP archive
+va_arg (3)           - variable argument lists
+va_copy (3)          - variable argument lists
+va_end (3)           - variable argument lists
+va_start (3)         - variable argument lists
+valgrind-listener (1) - listens on a socket for Valgrind commentary
+vdir (1)             - list directory contents
+x86_64-linux-gnu-nm (1) - list symbols from object files
+x86_64-linux-gnu-size (1) - list section sizes and total size of binary files
+XcupGetReservedColormapEntries (3) - list colormap entries reserved by the system
+xdr_pmaplist (3)     - library routines for remote procedure calls
+XtCallCallbackList (3) - process callbacks
+XtFindFile (3)       - search for a file using substitutions in the path list
+XtGetActionList (3)  - obtain class action list
+XtGetConstraintResourceList (3) - obtain resource list
+XtGetDisplays (3)    - retrieve a list of displays associated with an application context
+XtGetResourceList (3) - obtain resource list
+XtKeysymToKeycodeList (3) - query keysyms and keycodes
+XtMergeArgLists (3)  - set and merge ArgLists
+XtSetArg (3)         - set and merge ArgLists
+XtVaCreateArgsList (3) - dynamically allocate a varargs list
+zipinfo (1)          - list detailed information about a ZIP archive
