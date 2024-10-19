@@ -1,0 +1,10 @@
+// BASIC COMMANDS PART 1
+@Subhomoy21 ➜ /workspaces/LearningLinux (main) $ man uname
+@Subhomoy21 ➜ /workspaces/LearningLinux (main) $ ls
+README.md
+@Subhomoy21 ➜ /workspaces/LearningLinux (main) $ ls
+README.md  linuxCommands
+@Subhomoy21 ➜ /workspaces/LearningLinux (main) $ ls -l
+total 8
+-rw-rw-rw-  1 codespace root        15 Oct 19 04:16 README.md
+drwxrwxrwx+ 2 codespace codespace 4096 Oct 19 04:49 linuxCommands
